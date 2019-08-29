@@ -25,7 +25,7 @@
     </style>
 </head>
 <body>
-    <form defaultbutton="SubmitButton" defaultfocus="FirstNameTextBox" id="form1" runat="server">
+    <form defaultbutton="SubmitButton" id="form1" runat="server">
         <div>
             <table class="auto-style1">
                 <tr>
