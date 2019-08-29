@@ -16,12 +16,20 @@ namespace LearnASPWebForm
 
         protected void SubmitButton_Click(object sender, EventArgs e)
         {
-            // Get the input from the first name textbox.
-            var fname = FirstNameTextBox.Text;
-            var lname = LastNameTextBox.Text;
-            var state = StatesDropDown.SelectedValue;
+            // Will iterate through all the web validation server controls and validation each one.
+            Page.Validate();
 
-            OutputLabel.Text = fname + " " + lname + " " + state;
+            if (Page.IsValid) // If one of the validations is false then it will show the error message. So now need for the else statement.
+            {
+                // Get the input from the first name textbox.
+                var fname = FirstNameTextBox.Text;
+                var lname = LastNameTextBox.Text;
+                var state = StatesDropDown.SelectedValue;
+
+                OutputLabel.Text = fname + " " + lname + " " + state;
+            }
+
+            
         }
     }
 }
