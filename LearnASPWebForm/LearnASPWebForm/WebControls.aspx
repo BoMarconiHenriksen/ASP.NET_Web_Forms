@@ -51,6 +51,14 @@
                     </td>
                 </tr>
                 <tr>
+                    <td class="auto-style3">Email</td>
+                    <td class="auto-style4">
+                        <asp:TextBox ID="EmailTextBox" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server"  ControlToValidate="EmailTextBox" ErrorMessage="Please enter an email.">*</asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator" runat="server" ErrorMessage="Please enter a valid email." Operator="DataTypeCheck" ControlToValidate="EmailTextBox" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">*</asp:RegularExpressionValidator>
+                    </td>
+                </tr>
+                <tr>
                     <td class="auto-style3">State</td>
                     <td class="auto-style4">
                         <asp:DropDownList ID="StatesDropDown" runat="server">
