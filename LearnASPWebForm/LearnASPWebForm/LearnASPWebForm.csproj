@@ -106,7 +106,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="App_Data\AdventureWorksLT_Data.mdf" />
+    <Content Include="App_Data\AdventureWorksLT_Data_log.ldf">
+      <DependentUpon>AdventureWorksLT_Data.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\Northwind.mdf" />
+    <Content Include="App_Data\Northwind_log.ldf">
+      <DependentUpon>Northwind.mdf</DependentUpon>
+    </Content>
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
