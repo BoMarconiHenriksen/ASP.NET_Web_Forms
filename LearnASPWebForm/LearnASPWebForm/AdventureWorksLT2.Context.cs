@@ -13,10 +13,10 @@ namespace LearnASPWebForm
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class AdventureWorksLT_DataEntities : DbContext
+    public partial class AdventureWorksLT_DataEntities2 : DbContext
     {
-        public AdventureWorksLT_DataEntities()
-            : base("name=AdventureWorksLT_DataEntities")
+        public AdventureWorksLT_DataEntities2()
+            : base("name=AdventureWorksLT_DataEntities2")
         {
         }
     

@@ -50,6 +50,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.EntityDataSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.EntityDataSource.6.0.0\lib\net40\Microsoft.AspNet.EntityDataSource.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
@@ -114,16 +117,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="AdventureWorksLT.Context.tt">
+    <Content Include="AdventureWorksLT2.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AdventureWorksLT.Context.cs</LastGenOutput>
-      <DependentUpon>AdventureWorksLT.edmx</DependentUpon>
+      <DependentUpon>AdventureWorksLT2.edmx</DependentUpon>
+      <LastGenOutput>AdventureWorksLT2.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="AdventureWorksLT.tt">
+    <Content Include="AdventureWorksLT2.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AdventureWorksLT.edmx</DependentUpon>
-      <LastGenOutput>AdventureWorksLT.cs</LastGenOutput>
+      <DependentUpon>AdventureWorksLT2.edmx</DependentUpon>
+      <LastGenOutput>AdventureWorksLT2.cs</LastGenOutput>
     </Content>
+    <Content Include="AdventureWorksWebform.aspx" />
     <Content Include="App_Data\AdventureWorksLT_Data.mdf" />
     <Content Include="App_Data\AdventureWorksLT_Data_log.ldf">
       <DependentUpon>AdventureWorksLT_Data.mdf</DependentUpon>
@@ -153,12 +157,12 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="GridViewDemo.aspx" />
     <Content Include="WebControls.aspx" />
-    <EntityDeploy Include="AdventureWorksLT.edmx">
+    <EntityDeploy Include="AdventureWorksLT2.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>AdventureWorksLT.Designer.cs</LastGenOutput>
+      <LastGenOutput>AdventureWorksLT2.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="AdventureWorksLT.edmx.diagram">
-      <DependentUpon>AdventureWorksLT.edmx</DependentUpon>
+    <Content Include="AdventureWorksLT2.edmx.diagram">
+      <DependentUpon>AdventureWorksLT2.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -196,20 +200,27 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdventureWorksLT.Context.cs">
+    <Compile Include="AdventureWorksLT2.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorksLT.Context.tt</DependentUpon>
+      <DependentUpon>AdventureWorksLT2.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="AdventureWorksLT.cs">
+    <Compile Include="AdventureWorksLT2.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorksLT.tt</DependentUpon>
+      <DependentUpon>AdventureWorksLT2.tt</DependentUpon>
     </Compile>
-    <Compile Include="AdventureWorksLT.Designer.cs">
+    <Compile Include="AdventureWorksLT2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorksLT.edmx</DependentUpon>
+      <DependentUpon>AdventureWorksLT2.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="AdventureWorksWebform.aspx.cs">
+      <DependentUpon>AdventureWorksWebform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdventureWorksWebform.aspx.designer.cs">
+      <DependentUpon>AdventureWorksWebform.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
@@ -228,7 +239,7 @@
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs">
-      <DependentUpon>AdventureWorksLT.tt</DependentUpon>
+      <DependentUpon>AdventureWorksLT2.tt</DependentUpon>
     </Compile>
     <Compile Include="DataSourceControlsDemo1.aspx.cs">
       <DependentUpon>DataSourceControlsDemo1.aspx</DependentUpon>

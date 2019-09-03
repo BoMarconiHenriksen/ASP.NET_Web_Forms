@@ -53,7 +53,7 @@
           <Property Name="rowguid" Type="Guid" Nullable="false" />
           <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
-        <EntityContainer Name="AdventureWorksLT_DataEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="AdventureWorksLT_DataEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Customers" EntityType="Self.Customer" />
         </EntityContainer>
       </Schema>
@@ -61,7 +61,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="AdventureWorksLT_DataModelStoreContainer" CdmEntityContainer="AdventureWorksLT_DataEntities">
+        <EntityContainerMapping StorageEntityContainer="AdventureWorksLT_DataModelStoreContainer" CdmEntityContainer="AdventureWorksLT_DataEntities2">
           <EntitySetMapping Name="Customers">
             <EntityTypeMapping TypeName="AdventureWorksLT_DataModel.Customer">
               <MappingFragment StoreEntitySet="Customer">
