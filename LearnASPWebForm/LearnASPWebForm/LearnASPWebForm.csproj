@@ -167,6 +167,7 @@
       <DependentUpon>AdventureWorksLT2.edmx</DependentUpon>
     </Content>
     <Content Include="MasterPageExample.Master" />
+    <Content Include="Print.Master" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -274,6 +275,13 @@
     </Compile>
     <Compile Include="MasterPageExample.Master.designer.cs">
       <DependentUpon>MasterPageExample.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Print.Master.cs">
+      <DependentUpon>Print.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Print.Master.designer.cs">
+      <DependentUpon>Print.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

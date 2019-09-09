@@ -4,4 +4,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphMain" runat="server">
   This is my main page content.
+  <a href="TimeSheetViewer.aspx?print=true">Print Me</a>
+  <br />
 </asp:Content>

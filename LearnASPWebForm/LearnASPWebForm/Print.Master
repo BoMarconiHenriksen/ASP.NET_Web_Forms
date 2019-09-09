@@ -1,0 +1,18 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Print.master.cs" Inherits="LearnASPWebForm.Print" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+      <%-- This is where pages get merged into this template. --%>
+      <asp:ContentPlaceHolder ID="cphMain" runat="server" />
+    </form>
+</body>
+</html>
