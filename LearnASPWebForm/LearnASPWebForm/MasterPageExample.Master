@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPageExample.master.cs" Inherits="LearnASPWebForm.MasterPageExample" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+  <title>TimeTracker</title>
+  <%-- Inject css, javascript files that you want to go up in the head section. Optional. --%>
+  <asp:ContentPlaceHolder ID="head" runat="server" />
+</head>
+<body>
+  <!-- Header -->
+  <div style="float: left; width: 50%; text-align: left; font-size: 16pt; font-weight: bold;">
+    TimeTracker
+  </div>
+
+  <div style="float: right; width: 47%; text-align: right;">
+    <asp:Label ID="DateLabel" runat="server" />
+  </div>
+
+  <div>
+    <br />
+    <form id="form1" runat="server">
+
+      <%-- This is where pages get merged into this template. --%>
+      <asp:ContentPlaceHolder ID="cphMain" runat="server" />
+    </form>
+    <br />
+  </div>
+
+  <div>
+    <!-- Footer -->
+    &copy; 2019
+
+  </div>
+</body>
+</html>
